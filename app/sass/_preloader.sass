@@ -1,0 +1,52 @@
+#preloader
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 9999
+  width: 100%
+  height: 100%
+  overflow: visible
+  background: #f9f9f9
+
+#preloader_outer
+  width: 75px
+  height: 75px
+  font-size: 0
+  display: inline-block
+
+#preloader_inner
+  width: 75px
+  height: 75px
+  animation: outer 6600ms linear infinite
+
+  svg
+    animation: inner 1320ms linear infinite
+
+    circle
+      fill: none
+      stroke: #2c3e50
+      stroke-linecap: round
+      animation: arc 1320ms cubic-bezier(.8, 0, .4, .8) infinite
+
+@keyframes outer
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
+
+@keyframes inner
+  0%
+    transform: rotate(-100.8deg)
+  100%
+    transform: rotate(0)
+
+@keyframes arc
+  0%
+    stroke-dasharray: 1 210.48670779px
+    stroke-dashoffset: 0
+  40%
+    stroke-dasharray: 151.55042961px, 210.48670779px
+    stroke-dashoffset: 0
+  100%
+    stroke-dasharray: 1 210.48670779px
+    stroke-dashoffset: -151.55042961px

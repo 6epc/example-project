@@ -1,0 +1,549 @@
+.content
+  position: relative
+  padding: 20px 0
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    min-height: 530px
+    background: url(../img/color_body_bg.png) no-repeat center
+    background-size: cover
+
+.main_inner
+  display: flex
+  flex-wrap: wrap
+  max-width: 100%
+
+  aside
+    width: 360px
+    margin-right: 20px
+
+/* aside */
+.person_block
+  padding-bottom: 20px
+  position: relative
+  border-bottom: 1px solid #ffffff
+  box-shadow: 0 1px 0 #dcdcdc
+  margin-bottom: 10px
+
+  &:last-child
+    border: none
+    box-shadow: none
+    margin-bottom: 0
+
+  .person_info_ttl
+    font-weight: 300
+    font-size: 28px
+    line-height: 30px
+    margin-bottom: 9px
+    text-shadow: 0 1px 0 #ffffff
+
+  .person_info_wrap
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 15px
+
+    .avatar
+      width: 163px
+      height: 163px
+      overflow: hidden
+      margin-right: 15px
+
+    .profile_info_wrap
+      flex: 1
+      position: relative
+      top: -5px
+  
+  .person_group
+    margin-bottom: 9px
+
+    .nickname
+      position: relative
+      padding-left: 15px
+
+      &.online
+        color: #34ba41
+
+        .online_indicator
+          background-color: #34ba41
+          border: 1px solid #34ba41
+
+      .online_indicator
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background-color: #fff
+        position: absolute
+        left: 0
+        top: 5px
+        border: 1px solid #e74c3c
+
+    .person_name
+      font-size: 21px
+      line-height: 24px
+      display: block
+
+.personal_actions
+  .btn_blue
+    display: inline-block
+    vertical-align: middle
+    color: #ffffff
+    font-weight: 600
+    text-shadow: 0 -1px 0 rgba(0,0,0,.65 )
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.15), 0 1px 2px rgba(0,0,0,.2)
+    border: 1px solid #0081ee
+    border-radius: 6px
+    background: radial-gradient(ellipse at center, rgba(17,185,246,1) 0%,rgba(0,176,245,1) 100%)
+    padding: 9px 30px
+    margin-right: 13px
+
+    &:hover
+      background: radial-gradient(ellipse at center, rgba(0,201,248,1) 0%,rgba(0,190,246,1) 100%)
+
+    &:active
+      background: radial-gradient(ellipse at center, rgba(0,181,245,1) 0%,rgba(0,181,245,1) 100%)
+
+.about_person_row
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 14px
+
+  &:last-child
+    margin-bottom: 0
+
+  .col_left
+    width: 140px
+    max-width: 100%
+    padding-right: 10px
+    font-size: 12px
+    color: #7f8c8d
+    line-height: 14px
+
+  .col_right
+    flex: 1
+    line-height: 14px
+
+    .soc
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li
+        display: inline-block
+        margin-right: 2px
+
+        &.tw
+          a
+            color: #2caae0
+        &.drib
+          a
+            color: #f871a2  
+        &.fb
+          a
+            color: #3b5b9b  
+        &.ggl
+          a
+            color: #f63c27
+
+        &:hover
+          a
+            opacity: .9
+            top: -2px  
+
+        a
+          display: block
+          font-size: 44px
+          line-height: 1
+          position: relative
+
+.friend_list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -1px
+  .item
+    width: calc(100%/4 - 2px)
+    margin: 2px 1px 0
+    overflow: hidden
+    background-color: #fff
+
+    img
+      transition: transform .3s ease
+
+    &:hover a img
+      transform: scale(1.1)   
+
+/* main */
+.wall_nav
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+  list-style: none
+
+  >li
+    margin-right: 1px
+    position: relative
+    margin-bottom: -2px
+
+    &.active
+      >a
+        border-color: #cccccc
+        background-color: #f4f4f4
+        box-shadow: inset 0 1px 0 #ffffff
+
+    &:hover
+      >a
+        color: #e74c3c    
+
+    >a
+      display: block
+      font-size: 11px
+      line-height: 1
+      white-space: nowrap
+      text-transform: uppercase
+      color: #7f8c8d
+      text-shadow: 0 1px 0 #ffffff
+      border: 1px solid transparent
+      border-bottom: 0
+      padding: 15px 15px
+      border-radius: 6px 6px 0 0
+
+/* post wall */
+.content_col
+  flex: 1
+
+.post_wall_wrap
+  border: 1px solid #cccccc
+  border-top: none
+  box-shadow: 0 1px 3px rgba(0,0,0,.15)
+  background-color: #ffffff
+  padding: 15px 17px
+
+  .wall_total
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    font-size: 12px
+    margin-bottom: 13px
+
+    .total_post
+      max-width: 50%
+      flex: 1
+
+    .show_all_post
+      @extend .total_post
+      text-align: right
+
+.wall_item
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 20px
+
+  &:hover
+    .post_actions
+      display: block !important
+
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    width: 1px
+    height: calc(100% - 42px)
+    top: 42px
+    left: 22px
+    background: linear-gradient(to bottom, rgba(208,207,207,1) 0%,rgba(125,185,232,0.10) 100%)
+    z-index: 10
+
+  &:last-child
+    &::before
+      display: none
+
+  .wall_item_icon
+    width: 44px
+    margin-right: 15px
+  
+  .wall_item_body
+    flex: 1
+
+    .post_head
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-bottom: 10px
+
+      .head_inner_flex
+        display: flex
+        flex-wrap: wrap
+        max-width: 85%
+        line-height: 21px
+
+        .who_did
+          margin-right: 4px
+
+        .when_did
+          color: #7f8c8d
+          margin-left: 5px
+
+    .post_actions
+      display: none
+
+      a.post_edit
+        font-size: 16px
+        color: #7f8c8d
+        opacity: .5
+
+      a.post_close
+        font-size: 20px
+        color: #7f8c8d
+        opacity: .5
+        margin-left: 5px
+
+      a:hover
+        opacity: 1
+
+    .post_ttl
+      color: #949e9f
+      margin-bottom: 8px
+    
+    .photo_list
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -1px
+
+      &.wall_content_box
+        margin: 0 0 10px
+
+      .photo_list_item
+        width: calc(100%/3 - 2px)
+        margin: 0 1px 2px
+        overflow: hidden
+
+        img
+          transition: transform .3s ease
+
+        &:hover
+          img
+            transform: scale(1.1)
+
+    .wall_content_box
+      margin: 0 0 10px
+
+    .tags
+      margin-bottom: 13px
+      a
+        display: inline-block
+        font-size: 12px
+        line-height: 14px
+        padding: 2px 5px
+        box-shadow: 0 1px 1px rgba(202,214,219,.75)
+        border-radius: 4px
+        margin-right: 3px
+
+.post_comment_area
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 5px
+
+  .total_coments
+    font-size: 12px
+    color: #7f8c8d
+  
+  .coment_icons
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+    .icon_box
+      margin-left: 14px
+      position: relative
+
+      a
+        color: #2c3e50
+        display: flex
+        align-items: center
+        font-size: 12px
+
+      .like_count
+        margin-left: 5px
+
+      .forum_count
+        position: relative
+        right: 1px
+        top: 5px
+        background-color: #e74c3c
+        color: #fff
+        font-size: 11px
+        line-height: 11px
+        width: 14px
+        height: 14px
+        -webkit-border-radius: 50%
+        border-radius: 50%
+        text-align: center
+        padding-top: 0.5px
+        z-index: 1
+        display: inline-block
+        
+      .fa
+        font-size: 15px
+        transition: transform .3s ease
+
+      .fa-eye
+        color: #2c3e50
+      
+      .fa-heart
+        color: rgba(127,140,141,.5)
+        &.has_count
+          color: #e74c3c
+        &:hover
+          color: #e74c3c
+
+.comments_list
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.15)
+
+  .comment_item
+    padding: 10px 0
+    border-top: 1px solid #dcdcdc
+    display: flex
+    flex-wrap: wrap
+
+    &.delete
+      display: none
+
+    &:hover
+      .comment_close
+        display: block !important
+
+    &:last-child
+      border-bottom: none
+
+    .ava
+      width: 51px
+      overflow: hidden
+      margin-right: 10px
+
+    .comment_meta
+      flex: 1
+
+      .comment_head
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        padding-right: 35px
+        color: #7f8c8d
+        line-height: 14px
+        
+        .when
+          font-size: 12px
+          margin-left: 5px
+
+        .comment_close
+          font-size: 20px
+          color: #7f8c8d
+          opacity: .5
+          position: absolute
+          right: 0
+          display: none
+
+          &:hover
+            opacity: 1
+
+      .compatibility
+        font-size: 12px
+        margin-bottom: 5px
+
+        &.high
+          color: #34ba41
+
+        &.low
+          color: #e74c3c
+
+/* custon video */
+.video_box
+  display: flex
+  position: relative
+  background-color: #000000
+
+  .custom_video_controls
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 10
+
+    button
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 20
+      border: none
+      color: #ffffff
+      background-color: rgba(0,0,0,.5)
+      font-size: 40px
+      line-height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0
+
+      &:hover
+        background-color: transparent
+
+.wall_item
+  &.artice_item
+    .wall_item_text
+      line-height: 16px
+
+      .wall_artice_thumb
+        float: left
+        margin: 0 10px 0 5px
+
+.tooltip
+  display: block !important
+  min-width: 200px
+  max-width: 250px
+  color: #fff
+  font-size: 12px
+  opacity: 1
+
+  &.bottom
+    .tooltip-arrow
+      border-bottom-color: #616e7c
+
+  .tooltip-inner
+    background-color: #616e7c
+    opacity: 1
+    text-shadow: 0 1px 0 rgba(44,62,80,.75)
+
+  a
+    display: inline-block
+
+.scrollToTop
+  position: fixed
+  left: 50%
+  margin-left: -20px
+  bottom: 100px
+  z-index: 999
+  display: block
+  border: 1px solid #cccccc
+  border-radius: 3px
+  color: #abb3b4
+  font-size: 20px
+  line-height: 1
+  background-color: #f4f4f4
+  padding: 10px
+  box-shadow: 1px 1px 3px rgba(0,0,0,.3)
+
+
+
+
+
+

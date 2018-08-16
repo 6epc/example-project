@@ -1,0 +1,60 @@
+html,
+body
+  height: 100%
+
+body
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px
+  line-height: 18px
+  color: $accent
+  overflow-x: hidden
+  min-width: 320px
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased !important
+  backface-visibility: hidden
+  background: url(../img/body_patern.png) repeat left top
+
+a,
+a:hover,
+a:active,
+a:focus,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button,
+button:hover,
+button:focus,
+button:active
+  outline: none
+  outline-color: transparent !important
+
+a
+  text-decoration: none
+  color: #3498db
+
+  &:hover, &:focus
+    text-decoration: none
+    color: #e74c3c
+  
+input[type="submit"],
+button,
+a
+  transition: all .3s ease
+
+.mm-slideout
+  z-index: auto
+
+img, video
+  max-width: 100%
+  height: auto
+
+.container
+  width: 980px
+  padding: 0 10px
